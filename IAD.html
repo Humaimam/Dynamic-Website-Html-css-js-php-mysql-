@@ -1,0 +1,188 @@
+<!DOCTYPE >
+<html>
+<head>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <link rel="HTML" href="lawn.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .menu{
+        text-align: left;
+        display: contents;
+        z-index:4;
+      }
+      a:visited{
+        color:black;
+      }
+      a:active{
+        color:rgb(90, 84, 84)
+      }
+      a:hover{
+        font-weight: 800px;
+        color:blue;
+
+      }
+      a:link{
+        color: rgb(48, 47, 47);
+      }
+      .stylo{
+        margin-top:400px;
+      }
+    </style>
+
+</head>
+<body>
+  <div>
+    <div id="slideshow">
+        <div>
+          <img style="z-index: 1;"  id="header"src="hqdefault.jpg">
+          <p style="z-index: 2;font-size: 50px;color:rgb(212, 203, 203);;margin-top: -25%;padding: 10%">ONLINE SHOPPING WEBSITE</p>
+        </div>
+        <div>
+          <img style="z-index: 1;"  id="header"src="header2.jpg">
+          <p style="z-index: 2;font-size: 50px;color:white;;margin-top: -25%;padding: 10%">ONLINE SHOPPING WEBSITE</p>
+        </div>
+        <div>
+          <img style="z-index: 1;"  id="header"src="header3.jpg">
+          <p style="z-index: 2;font-size: 50px;color:white;;margin-top: -25%;padding: 10%">ONLINE SHOPPING WEBSITE</p>
+        </div>
+     </div>
+  </div>
+  <br/>
+  <div>
+     <div class="topnav" id="myTopnav" >
+       <ul id ="list" class="stylo" >
+        <a href="IAD.html" > <li>SALE</li></a>
+             <a href="lawn.html" > <li>LAWN COLLECTION</li></a>
+               <a href="lawn.html"> <li>NEW ARRIVAL</li></a>
+                 <a href="lawn.html"> <li>UNSTICHED</li></a>
+                   <a href="women2.html">   <li>WOMEN</li></a>
+                       <a href="Men.html" >  <li>MEN</li></a>
+                       <a href="about.html" >  <li>About Us</li></a>
+                         <a href="form.html">  <li>CONTACT US</li></a>
+                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                      
+           </ul>
+       
+     </div>
+
+  </div >
+  
+     <div style="height:800px;;text-align: center;">
+      <div id="slideshow1">
+          <div>
+              <div id="text"><h><strong>kurta</strong></h>
+                <p> Our trendy collection for men is perfectly crafted using premium quality fabric with detailing.</p></div>
+            
+            <img style="z-index: 1;"  id="content1"src="kurta.jpg">
+             </div>
+          <div>
+              <div  1` id="text"><h><strong>The Era fragrance of Shahid Afridi</strong></h>
+                <p>Witness the start of an Era with dominating notes of Bergamot, Vetiver, Pink Pepper, Vanilla and Amber. The Era, fragrance of Shahid Afridi.</p>
+              </div>
+            <img  style="z-index: 1;"  id="content1"src="perfume.jpg">
+            
+          </div>
+          <div>
+              <div id="text" ><h><strong>Stitched Collection</strong></h>
+                <p>              Explore an extensive range of lavish stitched and ready to weardresses for Ladies.</p></div>                
+            <img style="z-index: 1;"  id="content1"src="girls_dress.jpg">
+           </div>
+       </div>
+       <br/>
+       
+    </div>
+    
+
+
+     <p>
+      
+<div style="display: inline;">
+  <br>
+  <div id="text2"><h style="font-size: 64px;line-height: 84px;"><strong>Ladies Kurti</strong></h>
+    Ready to wear formal and casual kurti collection.</div>
+</div>
+      <img style="position:relative;z-index: 1;;margin-top: 10px;;width: 400px;height: 700px;float: left;margin-left: 300px;" src="kurti_5.jpg"/>
+    <img style="position: relative;z-index: 1;width: 330px;height: 550px;margin:70px 0px 0px 30px;"src="kurti2.jpg"/>
+    
+    
+      </p>
+      <div style="text-align: center;;margin-top:5%;">
+        
+  <div style="position: absolute;z-index: 2;margin-top:35%;margin-left:65%;"><h style="-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: azure;color: #303030;;margin-left: 0%;font-size: 64px;line-height: 84px;"><strong>Men-Festive</strong></h>
+  <br/>
+  <br/>  <u>THE CLASSICS ARE BACK IN FASHION.</u></div>
+        <img style="z-index: 1; margin-top: 8%;" src="men_2.jpg"/>
+      </div>
+</body>
+<script>
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+    x.classList.add("menu");
+    x.classList.remove("topnav")
+  } else {
+    x.className = "topnav";
+  }
+}
+$("#slideshow > div:gt(0)").hide();//select all dive after 0 and hide them all.
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)//The fadeOut() method gradually changes the opacity, for selected elements, from visible to hidden (fading effect).
+    .next()//Return the next sibling element of each <li> element with class name "start":
+    .fadeIn(1000)//The fadeIn() method gradually changes the opacity, for selected elements, from hidden to visible (fading effect).
+    .end()
+    .appendTo('#slideshow');
+}, 5000);
+
+$("#slideshow1 > div:gt(0)").hide();//select all dive after 0 and hide them all.
+
+setInterval(function() {
+  $('#slideshow1 > div:first')
+    .fadeOut(1000)//The fadeOut() method gradually changes the opacity, for selected elements, from visible to hidden (fading effect).
+    .next()//Return the next sibling element of each <li> element with class name "start":
+    .fadeIn(1000)//The fadeIn() method gradually changes the opacity, for selected elements, from hidden to visible (fading effect).
+    .end()
+    .appendTo('#slideshow1');
+}, 5000);
+window.onscroll= function(){
+  myfstickyfunction();
+}
+function myfstickyfunction(){
+  var sticky=document.getElementById("myTopnav");
+  var lst=document.getElementById("list");
+  var content1=document.getElementById("slideshow1");
+  var position2=lst.offsetTop;
+  var position=sticky.offsetTop;
+  
+if(window.pageYOffset>position)
+{
+  sticky.classList.add("sticky");
+  content1.classList.add("content1");
+}
+else{
+  sticky.classList.remove("sticky");
+  content1.classList.remove("content1");
+
+}
+if(window.pageYOffset>position2)
+{  
+  lst.classList.remove("stylo");
+
+}
+else{
+  lst.classList.add("stylo");
+
+}
+}
+
+</script>
+</html>
